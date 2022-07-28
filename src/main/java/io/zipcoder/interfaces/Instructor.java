@@ -4,6 +4,7 @@ public class Instructor extends Person implements Teacher {
 
     public Instructor(long id, String name) {
         super(id, name);
+        Instructors.getInstance().add(this);
     }
 
     public void teach(Learner learner, double numberOfHours) {

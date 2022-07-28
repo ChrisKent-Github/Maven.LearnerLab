@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class People<E extends Person> implements Iterable<E> {
-    List<E> personList;
+    private List<E> personList;
 
     public People(){
         this.personList = new ArrayList<E>();
