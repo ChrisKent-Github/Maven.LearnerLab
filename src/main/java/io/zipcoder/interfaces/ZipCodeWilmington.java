@@ -9,8 +9,8 @@ public class ZipCodeWilmington {
 
 
 
-    public void hostLecture(Teacher teacher, double numberOfHours){
-        Learner[] learners = (Learner[]) students.personList.toArray(new Learner[0]);
+    public void hostLecture(Instructor teacher, double numberOfHours, Learner[] learners){
+//        Learner[] learners = students.personList.toArray(new Learner[0]);
 //      Student[] studentBody = (Student[]) students.toArray();
         teacher.lecture(learners, numberOfHours);
     }
@@ -19,19 +19,17 @@ public class ZipCodeWilmington {
         //        Teacher teacher = (Teacher) instructors.findById(id);
 //        Student[] studentBody = students.toArray();
 //        Learner[] learners = (Learner[]) students.personList.toArray(new Learner[0]);
-
-        Teacher teacher = (Teacher) Instructors.getInstance().findById(id);
+        Teacher teacher = Instructors.getInstance().findById(id);
         teacher.lecture(learners, numberOfHours);
-
-
     }
 
     public HashMap<Student, Double> getStudyMap(){
         HashMap<Student, Double> studyMap = new HashMap<Student, Double>();
-//        Student[] studentBody = (Student[]) students.toArray();
+        Student[] studentBody = (Student[]) students.toArray();
 //        for (Student student: students.personList) {
-//            studyMap.put(student, student.getTotalStudyTime());
-//        }
+            for(int i = 0; i < students.personList.size(); i++){
+            studyMap.put(studentBody[i], studentBody[i].getTotalStudyTime());
+        }
         return studyMap;
     }
 }
