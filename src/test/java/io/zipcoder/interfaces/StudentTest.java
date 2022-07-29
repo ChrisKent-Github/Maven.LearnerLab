@@ -14,6 +14,8 @@ public class StudentTest {
         //When
         //Then
         Assert.assertTrue(student instanceof Learner);
+        Students.getInstance().removeAll();
+
     }
 
     @Test
@@ -23,6 +25,7 @@ public class StudentTest {
         //When
         //Then
         Assert.assertTrue(student instanceof Person);
+        Students.getInstance().removeAll();
     }
 
     @Test
@@ -36,5 +39,6 @@ public class StudentTest {
         double expectedHours = 65.0;
         //Then
         Assert.assertEquals(expectedHours, student.getTotalStudyTime(), .1);
+        Students.getInstance().removeAll();
     }
 }

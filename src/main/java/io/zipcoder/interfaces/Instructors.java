@@ -8,7 +8,7 @@ public class Instructors extends People {
 
 
     private Instructors(){
-
+//        this.add(new Instructor(321, "Fred"));
     }
 
     public static Instructors getInstance(){

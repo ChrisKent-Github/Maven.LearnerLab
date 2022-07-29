@@ -7,8 +7,12 @@ public class Students extends People {
     private static final Students INSTANCE = new Students();
 
 
-    private Students(){
-//        add(new Student(123, "Lisa"));
+    Students(){
+//        this.add(new Student(123, "Lisa"));
+//        this.add(new Student(234, "Rico"));
+//        this.add(new Student(345, "Sarah"));
+//        this.add(new Student(456, "AJ"));
+//        this.add(new Student(567, "Berlin"));
 //        add(new Student(234,"Rico"));
 //        add(new Student(345,"Sarah"));
 //        add(new Student(456,"AJ"));
