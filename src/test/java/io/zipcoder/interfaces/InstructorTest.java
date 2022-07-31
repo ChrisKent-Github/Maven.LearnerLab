@@ -14,6 +14,7 @@ public class InstructorTest {
         //Then
         Assert.assertTrue(instructor instanceof Teacher);
         Instructors.getInstance().removeAll();
+        Students.getInstance().removeAll();
     }
 
     @Test
@@ -24,6 +25,7 @@ public class InstructorTest {
         //Then
         Assert.assertTrue(instructor instanceof Person);
         Instructors.getInstance().removeAll();
+        Students.getInstance().removeAll();
     }
 
     @Test
@@ -36,6 +38,7 @@ public class InstructorTest {
         //Then
         Assert.assertEquals(6.0, student.getTotalStudyTime(),.1);
         Instructors.getInstance().removeAll();
+        Students.getInstance().removeAll();
     }
 
     @Test
@@ -57,6 +60,7 @@ public class InstructorTest {
         //Then
         Assert.assertEquals(expectedHours, student1.getTotalStudyTime(), .1);
         Instructors.getInstance().removeAll();
+        Students.getInstance().removeAll();
     }
 
 

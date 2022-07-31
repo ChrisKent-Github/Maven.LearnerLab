@@ -16,9 +16,10 @@ public class TestZipCodeWilmington {
         Student student30 = new Student(333, "Nikki");
         Student student40 = new Student(444, "Mariah");
         Learner[] cohort = new Learner[4];
-        for (int i = 0; i < cohort.length; i++) {
-            cohort[i] = (Learner) students.personList.get(i);
-        }
+        cohort[0] = (Learner) students.findById(111);
+        cohort[1] = (Learner) students.findById(222);
+        cohort[2] = (Learner) students.findById(333);
+        cohort[3] = (Learner) students.findById(444);
 
         //When
         zcw.hostLecture(456,80.0, cohort);
@@ -40,9 +41,10 @@ public class TestZipCodeWilmington {
         Student student30 = new Student(333, "Nikki");
         Student student40 = new Student(444, "Mariah");
         Learner[] cohort = new Learner[4];
-        for (int i = 0; i < cohort.length; i++) {
-            cohort[i] = (Learner) students.personList.get(i);
-        }
+        cohort[0] = (Learner) students.findById(111);
+        cohort[1] = (Learner) students.findById(222);
+        cohort[2] = (Learner) students.findById(333);
+        cohort[3] = (Learner) students.findById(444);
 
         //When
         zcw.hostLecture(instructor,80.0, cohort);
