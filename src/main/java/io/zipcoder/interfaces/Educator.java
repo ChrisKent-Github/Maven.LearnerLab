@@ -1,10 +1,10 @@
 package io.zipcoder.interfaces;
 
 public enum Educator implements Teacher{
-    AUTUMN(Instructors.getInstance().getInstructor(1234), 0),
-    ANDREW(Instructors.getInstance().getInstructor(2345), 0),
-    ADAM(Instructors.getInstance().getInstructor(3456), 0),
-    IZZY(Instructors.getInstance().getInstructor(4567), 0);
+    AUTUMN(Instructors.getInstance().findById(1234), 0),
+    ANDREW(Instructors.getInstance().findById(2345), 0),
+    ADAM(Instructors.getInstance().findById(3456), 0),
+    IZZY(Instructors.getInstance().findById(4567), 0);
     public Instructor instructor;
     public double timeWorked;
 
